@@ -1233,75 +1233,115 @@ html::-webkit-scrollbar-thumb {
 .professional-standards {
   background: var(--light-bg);
   padding: 8rem 10%;
+  overflow: hidden;
 }
 
 .professional-standards .row {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 .professional-standards .row .content {
-  flex: 1 1 50rem;
+  flex: 1 1 45rem;
+  width: 100%;
 }
 
 .professional-standards .row .content span {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--brand-orange);
   font-weight: 600;
   text-transform: uppercase;
+  display: block;
 }
 
 .professional-standards .row .content h3 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: var(--brand-brown);
   padding: 1rem 0;
   text-transform: uppercase;
+  line-height: 1.2;
 }
 
 .professional-standards .row .content p {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: var(--light-color);
-  line-height: 2;
+  line-height: 1.8;
   padding-bottom: 2rem;
 }
 
 .professional-standards .row .logo-slider {
-  flex: 1 1 40rem;
+  flex: 1 1 30rem;
+  width: 100%;
   background: var(--white);
-  padding: 4rem;
+  padding: 3rem;
   border-radius: 1rem;
   box-shadow: var(--box-shadow);
+  overflow: hidden;
 }
 
 .professional-standards .slide {
   text-align: center;
+  padding: 1rem;
 }
 
 .professional-standards .slide img {
-  height: 12rem;
+  height: 10rem;
+  max-width: 100%;
   object-fit: contain;
 }
 
 .professional-standards .slide i {
-  font-size: 6rem;
+  font-size: 5rem;
   color: var(--brand-brown);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .professional-standards .slide p {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--brand-orange);
   font-weight: 600;
   text-transform: uppercase;
 }
 
-/* Responsive adjustment for mobile */
+/* --- RESPONSIVE BREAKPOINTS --- */
+
+@media (max-width: 991px) {
+  .professional-standards {
+    padding: 5rem 5%;
+  }
+}
+
 @media (max-width: 768px) {
   .professional-standards .row {
     flex-direction: column;
     text-align: center;
+  }
+
+  .professional-standards .row .content {
+    flex: 1 1 auto;
+    margin-bottom: 3rem;
+  }
+
+  .professional-standards .row .logo-slider {
+    flex: 1 1 auto;
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .professional-standards .row .content h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .professional-standards .row .content h3 {
+    font-size: 2.2rem;
+  }
+
+  .professional-standards .slide i {
+    font-size: 4rem;
   }
 }
 
