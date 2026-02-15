@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohlatlole & Associates - Professional Land Surveyors</title>
+    <link rel="icon" type="icon" href="/images/logoroza.jpg" />
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+      <a href="#home" class="logo">
+        <img
+          src="images/logoroza.jpg"
+          alt="Mohlatlole & Associates Logo"
+          style="height: 6rem; width: auto; vertical-align: middle"
+        />
+      </a>
+
+      <nav class="navbar">
+        <a href="/">home</a>
+        <a href="/About-us.html">about</a>
+        <a href="/Services.html">services</a>
+        <a href="/Instruments.html">instruments</a>
+        <a href="/Contact-us.html">contact us</a>
+      </nav>
+
+      <div class="icons">
+        <a
+          href="https://wa.me/0824456974"
+          class="fab fa-whatsapp"
+          style="font-size: 2.5rem; color: #25d366; margin-left: 1.5rem"
+        ></a>
+      </div>
+    </header>
+
+    <section
+      class="contact-hero"
+      style="
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url(&quot;https://img.freepik.com/free-photo/call-center-agent-tracking-shipments-office-looking-pc-screen_482257-117862.jpg?semt=ais_user_personalization&w=740&q=80&quot;);
+      "
+    >
+      <div class="content">
+        <h3>Get In Touch</h3>
+        
+      </div>
+    </section>
+
+    <section class="contact-v2" id="contact">
+      <div class="row">
+        <form id="contact-form" class="contact-form">
+          <h3>Send us a message</h3>
+          <div class="inputBox">
+            <input
+              type="text"
+              name="user_name"
+              placeholder="Full Name"
+              required
+            />
+            <input
+              type="email"
+              name="user_email"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+          <div class="inputBox">
+            <input type="number" name="user_phone" placeholder="Phone Number" />
+            <input type="text" name="subject" placeholder="Subject" />
+          </div>
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
+          <input type="submit" value="Send Message" class="btn" />
+          <div
+            id="form-status"
+            style="margin-top: 1rem; font-size: 1.5rem"
+          ></div>
+        </form>
+
+        <div class="contact-sidebar">
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.437341887013!2d29.48911477534444!3d-23.83858007860155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6d67879e6093d%3A0x868b2098b1e067c8!2s48%20Pierre%20St%2C%20Bendor%2C%20Polokwane%2C%200699!5e0!3m2!1sen!2sza!4v1709400000000!5m2!1sen!2sza"
+              width="100%"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+          <div class="info-details">
+            <div class="info-box">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>48 Pierre Street, Bendor, Polokwane</p>
+            </div>
+            <div class="info-box">
+              <i class="fas fa-phone"></i>
+              <p>082 445 6974</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="whatsapp-widget-container">
+    <div class="whatsapp-magic-card">
+        <div class="magic-bg"></div>
+        <div class="card-content">
+            <div class="icon-box">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="text-box">
+                <h4>Instant Assistance</h4>
+                <p>Chat with a professional Land Surveyor right now.</p>
+            </div>
+            <a href="https://wa.me/27824456974" target="_blank" class="magic-btn">
+                Start Chat <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+    </section>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual Public Key
+      })();
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const status = document.getElementById("form-status");
+          status.innerText = "Sending...";
+
+          emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this).then(
+            function () {
+              status.style.color = "green";
+              status.innerText = "Success! We will contact you shortly.";
+              document.getElementById("contact-form").reset();
+            },
+            function (error) {
+              status.style.color = "red";
+              status.innerText = "Failed to send message. Please try again.";
+            },
+          );
+        });
+    </script>
+
+    <!--footer section starts  -->
+    <section class="footer">
+      <div class="box-container">
+        <div class="box about">
+          <img
+            src="/images/logoroza.jpg"
+            alt="Mohlatlole Logo"
+            class="footer-logo"
+          />
+          <p>
+            Professional Land Surveyors specializing in Cadastral and
+            Engineering surveys across South Africa.
+          </p>
+          <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a
+              href="https://wa.me/27824456974"
+              class="fab fa-whatsapp"
+              target="_blank"
+            ></a>
+          </div>
+        </div>
+
+        <div class="box">
+          <h3>Quick Links</h3>
+          <a href="#home" class="link"
+            ><i class="fas fa-chevron-right"></i> home</a
+          >
+          <a href="#about" class="link"
+            ><i class="fas fa-chevron-right"></i> about</a
+          >
+          <a href="#services" class="link"
+            ><i class="fas fa-chevron-right"></i> services</a
+          >
+          <a href="#projects" class="link"
+            ><i class="fas fa-chevron-right"></i> projects</a
+          >
+        </div>
+
+        <div class="box">
+          <h3>Contact Info</h3>
+          <a href="tel:0824456974" class="link"
+            ><i class="fas fa-phone"></i> 082 445 6974</a
+          >
+          <a href="mailto:info@mohlatlole.co.za" class="link"
+            ><i class="fas fa-envelope"></i> info@mohlatlole.co.za</a
+          >
+          <a href="#" class="link"
+            ><i class="fas fa-map-marker-alt"></i> 48 Pierre Street, Bendor,
+            Polokwane</a
+          >
+        </div>
+      </div>
+
+      <div class="credit">
+        created by <span>Devbeam Technologies</span> | all rights reserved!
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+    <script>
+      lightGallery(document.querySelector(".projects .box-container"));
+    </script>
+
+    <script>
+      var swiper = new Swiper(".home-slider", {
+        loop: true,
+        grabCursor: true,
+        effect: "fade", // Gives that high-end smooth transition
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

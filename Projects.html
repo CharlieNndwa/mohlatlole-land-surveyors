@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohlatlole & Associates - Professional Land Surveyors</title>
+    <link rel="icon" type="icon" href="/images/logoroza.jpg" />
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+      <a href="#home" class="logo">
+        <img
+          src="images/logoroza.jpg"
+          alt="Mohlatlole & Associates Logo"
+          style="height: 6rem; width: auto; vertical-align: middle"
+        />
+      </a>
+
+         <nav class="navbar">
+        <a href="/">home</a>
+        <a href="/About-us.html">about</a>
+        <a href="/Services.html">services</a>
+        <a href="/Instruments.html">instruments</a>
+        <a href="/Projects.html">projects</a>
+        <a href="/Contact-us.html">contact us</a>
+      </nav>
+
+      <div class="icons">
+        <a
+          href="https://wa.me/0824456974"
+          class="fab fa-whatsapp"
+          style="font-size: 2.5rem; color: #25d366; margin-left: 1.5rem"
+        ></a>
+      </div>
+    </header>
+
+    <section class="projects-under-construction">
+      <h1 class="heading">Our <span>Projects</span></h1>
+
+      <div class="construction-container">
+        <div class="magic-frame">
+          <div class="image-box">
+            <img
+              src="https://media.istockphoto.com/id/1411798446/vector/modern-coming-soon-under-construction-sticker-banner.jpg?s=612x612&w=0&k=20&c=KgQ9eYEfuzTdmc5ypmMYoz8JHPTbe_TjEXxyxNixKQ4="
+              alt="Under Construction"
+            />
+          </div>
+          <div class="clip-overlay"></div>
+        </div>
+
+        <div class="construction-content">
+          <h3>Something <span>Great</span> is in the Works</h3>
+          <p>
+            We are currently surveying and documenting our latest high-profile
+            projects in <strong>Polokwane</strong> and across South Africa. Our
+            team is finalizing the data to bring you a comprehensive portfolio
+            of our cadastral and engineering success stories.
+          </p>
+
+          <div class="status-bar">
+            <div class="status-fill"></div>
+          </div>
+          <p class="status-text">
+            <i class="fas fa-tools"></i> Portfolio Update in Progress...
+          </p>
+
+          <a href="/Contact-us.html" class="btn">Inquire About Our Work</a>
+        </div>
+      </div>
+    </section>
+    <!--footer section starts  -->
+    <section class="footer">
+      <div class="box-container">
+        <div class="box about">
+          <img
+            src="/images/logoroza.jpg"
+            alt="Mohlatlole Logo"
+            class="footer-logo"
+          />
+          <p>
+            Professional Land Surveyors specializing in Cadastral and
+            Engineering surveys across South Africa.
+          </p>
+          <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a
+              href="https://wa.me/27824456974"
+              class="fab fa-whatsapp"
+              target="_blank"
+            ></a>
+          </div>
+        </div>
+
+        <div class="box">
+          <h3>Quick Links</h3>
+          <a href="#home" class="link"
+            ><i class="fas fa-chevron-right"></i> home</a
+          >
+          <a href="#about" class="link"
+            ><i class="fas fa-chevron-right"></i> about</a
+          >
+          <a href="#services" class="link"
+            ><i class="fas fa-chevron-right"></i> services</a
+          >
+          <a href="#projects" class="link"
+            ><i class="fas fa-chevron-right"></i> projects</a
+          >
+        </div>
+
+        <div class="box">
+          <h3>Contact Info</h3>
+          <a href="tel:0824456974" class="link"
+            ><i class="fas fa-phone"></i> 082 445 6974</a
+          >
+          <a href="mailto:info@mohlatlole.co.za" class="link"
+            ><i class="fas fa-envelope"></i> info@mohlatlole.co.za</a
+          >
+          <a href="#" class="link"
+            ><i class="fas fa-map-marker-alt"></i> 48 Pierre Street, Bendor,
+            Polokwane</a
+          >
+        </div>
+      </div>
+
+      <div class="credit">
+        created by <span>Devbeam Technologies</span> | all rights reserved!
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+    <script>
+      lightGallery(document.querySelector(".projects .box-container"));
+    </script>
+
+    <script>
+      var swiper = new Swiper(".home-slider", {
+        loop: true,
+        grabCursor: true,
+        effect: "fade", // Gives that high-end smooth transition
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
